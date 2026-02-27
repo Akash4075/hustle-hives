@@ -29,14 +29,19 @@ app.post("/api/reviews", async (c) => {
     return c.json({ error: "Rating must be between 1 and 5" }, 400);
   }
 
-  await db
-    .prepare(
-      "INSERT INTO reviews (name, rating, message, created_at, updated_at) VALUES (?, ?, ?, datetime('now'), datetime('now'))"
-    )
-    .bind(name.trim(), rating, message.trim())
-    .run();
+  try {
+    await db
+      .prepare(
+        "INSERT INTO reviews (name, rating, message, created_at, updated_at) VALUES (?, ?, ?, datetime('now'), datetime('now'))"
+      )
+      .bind(name.trim(), rating, message.trim())
+      .run();
 
-  return c.json({ success: true }, 201);
+    return c.json({ success: true }, 201);
+  } catch (err: any) {
+    console.error("D1 Error:", err);
+    return c.json({ error: err.message || "Database error" }, 500);
+  }
 });
 
 // Admin login

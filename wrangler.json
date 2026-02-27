@@ -17,7 +17,8 @@
     {
       "binding": "DB",
       "database_name": "hustlehives-db",
-      "database_id": "4f2eb5e2-b252-4908-b3c2-a3662602b46d"
+      "database_id": "4f2eb5e2-b252-4908-b3c2-a3662602b46d",
+      "preview_database_id": "DB"
     }
   ]
 }
