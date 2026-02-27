@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "hustlehives",
+  "name": "hustle-hives",
   "main": "./src/worker/index.ts",
   "compatibility_date": "2025-06-17",
   "compatibility_flags": [
@@ -16,8 +16,8 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "hustlehives-db",
-      "database_id": "4f2eb5e2-b252-4908-b3c2-a3662602b46d",
+      "database_name": "hustle-hives-db",
+      "database_id": "019c9aea-ef01-7f72-9b4f-d8e2cca91aa9",
       "preview_database_id": "DB"
     }
   ]
