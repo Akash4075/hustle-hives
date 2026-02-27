@@ -1,9 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "019c9aea-ef01-7f72-9b4f-d8e2cca91aa9",
+  "name": "hustlehives",
   "main": "./src/worker/index.ts",
   "compatibility_date": "2025-06-17",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "observability": {
     "enabled": true
   },
@@ -18,20 +20,20 @@
       "database_id": "019c9aea-ef01-7f72-9b4f-d8e2cca91aa9"
     }
   ],
-	  "r2_buckets": [
-	    {
-	      "binding": "R2_BUCKET",
-	      "bucket_name": "019c9aea-ef01-7f72-9b4f-d8e2cca91aa9"
-	    }
-	  ],
-	  "services": [
-	    {
-	      "binding": "EMAILS",
-	      "service": "emails-service",
-	      "entrypoint": "EmailService",
-	      "props": {
-	        "appId": "019c9aea-ef01-7f72-9b4f-d8e2cca91aa9"
-	      }
-	    }
-	  ]
-	}
+  "r2_buckets": [
+    {
+      "binding": "R2_BUCKET",
+      "bucket_name": "019c9aea-ef01-7f72-9b4f-d8e2cca91aa9"
+    }
+  ],
+  "services": [
+    {
+      "binding": "EMAILS",
+      "service": "emails-service",
+      "entrypoint": "EmailService",
+      "props": {
+        "appId": "019c9aea-ef01-7f72-9b4f-d8e2cca91aa9"
+      }
+    }
+  ]
+}
